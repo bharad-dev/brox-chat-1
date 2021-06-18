@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+        login-in
+    </title>
+    <script  src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+<script  src="js/swup.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/swup.css">
+
+</head>
+<body>
+    <div   class="container">
+        <div  id="swup" class="transition-fade login-div">
+            <h3 id="swup" class='transition-fade heading'>Log into BROX</h3>
+            <form action="index.html" id="form" onsubmit="login(event)" autocomplete="off">
+               
+                <input  type="email" required placeholder="E-mail" name="User-email-Address" id="swup email" class="email transition-fade"><br>
+               
+                <input type="password"  required placeholder="Password" name="password" id="swup password" class="password transition-fade"><br>
+                <input type="submit" id="swup" class="transition-fade button"  value="Log in"><br><br><br>
+        
+            </form>
+            <a href="signup.html" class="transition-fade sign" id="sign swup" onclick="fly(event)">Create an Account</a>
+        </div >
+        <div class="rocket"> <img src="../img/rocket.png" rel="rocket" ></div>
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyASpOtjWyRDZZ8wLOgSgozpOhl0iVpxKyo",
+    authDomain: "brox-chat-2.firebaseapp.com",
+    projectId: "brox-chat-2",
+    storageBucket: "brox-chat-2.appspot.com",
+    messagingSenderId: "416958214971",
+    appId: "1:416958214971:web:93bda0be310201cbf5fd1e",
+    measurementId: "G-3CCW1SGHH9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  let auth=firebase.auth();
+</script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

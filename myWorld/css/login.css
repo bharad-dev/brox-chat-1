@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Infant:wght@700&family=Dela+Gothic+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.container{
+    font-family: "Poppins";
+    height:100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.login-div{
+    width: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login-div input{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;  
+    background-color: black;
+    border-color:black ;
+    border-bottom: 1px solid white;
+    color: white;
+    transition: background-color 450ms ease;
+}
+.login-div .button{
+    padding: .7rem 0;
+    border: none;
+    border-radius: 4px;
+   background-color: white;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all 500ms ease;
+}
+.login-div .button:hover{
+    border: 2px solid white;
+    box-shadow: inset 0 0 20em black;
+    color: white;
+}
+.login-div input:hover{
+    background-color:rgb(26, 24, 24);
+    
+}
+.login-div h3{
+    text-align: center;
+    letter-spacing: 5px;
+}
+.login-div .sign{
+    align-self: center;
+    color:white;
+    font-size: small;
+transition: border-bottom 350ms ease;
+}
+.login-div .sign:hover{
+    border-bottom:1px solid white;
+
+}
+.container .rocket img{
+    width:2vw;
+}
+
+.container .rocket{
+    display: none;
+    margin-right:2rem ;
+    align-self: flex-end;
+    transition: all 500ms;
+    animation: fly 1000ms ease-in 500ms 1 forwards;
+}
+@keyframes fly {
+    1%{
+        width: 2vw;
+        height:2vw;
+
+    }
+    30%{
+        height: auto;
+    }
+    100%{
+        transform: translateY(-120vh);
+    }
+    
+}
+.rocket::after{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: -53px;
+    right: 1vw;
+    width: 1px;
+    height: 50px;
+    background:white;
+}
+@media screen and (max-width:400px) {
+    .rocket::after{
+        width: .5px;
+    }
+    
+}

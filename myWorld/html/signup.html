@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/swup.css">
+
+</head>
+<body>
+    <div   class="container">
+    <div  id="swup" class="transition-fade signup-div">
+        <h1 id="swup" class='transition-fade heading'>Welcome Bro !</h1>
+        <form action="index.html" id="form" onsubmit="login(event)" autocomplete="off">
+            <input  type="text" required placeholder="Username" name="User name" id="swup username" class="username transition-fade"><br>
+            <input  type="email" required placeholder="E-mail" name="User-email-Address" id="swup email" class="email transition-fade"><br>
+            <input type="password"  required placeholder="Password" name="password" id="swup password" class="password transition-fade"><br>
+            <input type="radio" required value="male" name="gender" class="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" required value="female" name="gender" class="female" id="female">
+            <label for="female">Female</label><br>
+            <input type="submit" id="swup" class="transition-fade button"  value="Create"><br><br><br>
+    
+        </form>
+        <a href="login.html" class="transition-fade login" id="sign swup" onclick="fly(event)">Already have an Account</a>
+    </div >
+    </div>
+    <script>
+        console.log('enr');
+        let img=['../img/638240a29542bb38d572836a089a9802.jpg','../img/c6192e66eb5b7b87d43423606dfffa43.webp']
+      let ra=Math.floor(Math.random()*2);
+        let container=document.querySelector('.container');
+        container.style.backgroundImage="url("+img[ra]+")";
+    </script>
+       <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyASpOtjWyRDZZ8wLOgSgozpOhl0iVpxKyo",
+    authDomain: "brox-chat-2.firebaseapp.com",
+    projectId: "brox-chat-2",
+    storageBucket: "brox-chat-2.appspot.com",
+    messagingSenderId: "416958214971",
+    appId: "1:416958214971:web:93bda0be310201cbf5fd1e",
+    measurementId: "G-3CCW1SGHH9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  let auth=firebase.auth();
+  let firestore=firebase.firestore();
+</script>
+    <script src="../js/signup.js"></script>
+</body>
+</html>
